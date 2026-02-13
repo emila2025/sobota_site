@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>sobota qucik reminder</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+      <!-- WALIDATOR / TOAST -->
+  <div id="toast" class="toast" role="alert" aria-live="assertive">
+    <span id="toastText" class="toast__text">error</span>
+    <button id="toastClose" class="toast__close" type="button" aria-label="Zamknij">✕</button>
+  </div>
+
+  <main class="page">
+    <header class="top">
+      <nav class="tabs" aria-label="Nawigacja">
+        <a class="tab" href="to-do.html">TO DO</a>
+        <a class="tab" href="not-to-do.html">NOT TO DO</a>
+      </nav>
+
+      <h1 class="top__title">saturday qucik reminder</h1>
+    </header>
+
+    <section class="hero" aria-label="Strona tytułowa">
+      <!-- Podmień src na swoje zdjęcie -->
+      <!-- Podmień data-alt na DRUGIE zdjęcie, które ma wskoczyć po YES -->
+      <img
+        id="heroImage"
+        class="hero__image"
+        src="home_page.jpeg"
+        data-alt="happy.jpeg"
+        alt="Zdjęcie"
+      />
+    </section>
+
+    <!-- DÓŁ: are you in + YES/NO -->
+    <section class="cta" aria-label="Are you in?">
+      <p class="cta__label">are you in?</p>
+
+      <div class="cta__actions">
+        <button class="cta__btn" id="btnYes" type="button">YES</button>
+        <button class="cta__btn cta__btn--ghost" id="btnNo" type="button">NO</button>
+      </div>
+
+      <p class="cta__msg" id="ctaMsg" aria-live="polite"></p>
+    </section>
+
+        <!-- Pytanie + wybór godziny -->
+    <section class="time" aria-label="Wybór godziny">
+      <label class="time__label" for="timeSelect">what time are you coming?</label>
+      <select class="time__select" id="timeSelect" name="time">
+        <option value="" selected disabled>select time</option>
+        <option>12:00</option>
+        <option>13:00</option>
+        <option>14:00</option>
+        <option>15:00</option>
+        <option>16:00</option>
+        <option>17:00</option>
+        <option>18:00</option>
+      </select>
+    </section>
+    <footer class="footer">
+      sobota, Ostatnia 1E, 31-444 Kraków
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+
